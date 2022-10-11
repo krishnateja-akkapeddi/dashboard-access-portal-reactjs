@@ -15,10 +15,6 @@ const DashboardFactory = () => {
 
   const loggedInUser = new LocalLoggedInUser(storage);
 
-  const navigate = useNavigate();
-
-  console.log("FROMFAC", loggedInUser);
-
   return (
     <div>
       <DashboardPage loggedInUser={loggedInUser} />

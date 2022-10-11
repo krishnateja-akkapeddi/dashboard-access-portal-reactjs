@@ -1,3 +1,4 @@
+import React from "react";
 import { useMediaQuery } from "@mui/material";
 import ICONS from "../../../assests/images";
 import { Constants } from "../../../common/Constants";
@@ -11,6 +12,7 @@ import {
   TypographyColor,
   TypographySize,
 } from "../../ga-components/Typography";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   requestLoginOtp: RequestLoginOtp;
@@ -24,6 +26,11 @@ const LoginPage: React.FC<Props> = ({
   loggedInUser,
 }) => {
   const mobile = !useMediaQuery(Constants.MOBILE);
+  const loggedInUserDetails = loggedInUser.getUser();
+  const navigate = useNavigate();
+  React.useEffect(() => {
+    if (loggedInUserDetails) navigate("/dashboard");
+  }, []);
 
   return (
     <>

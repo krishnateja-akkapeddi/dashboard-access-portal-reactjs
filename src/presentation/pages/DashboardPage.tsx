@@ -50,7 +50,6 @@ const DashboardPage = (props: Props) => {
       }
     };
   }, []);
-  console.log("FASA", loggedInUserDetails);
 
   return (
     <div
