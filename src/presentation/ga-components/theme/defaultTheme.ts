@@ -1,0 +1,137 @@
+const theme = {
+  button: {
+    base: "rounded-full pr-6 pl-4 text-sm cursor-pointer text-white",
+    elevated: "drop-shadow-2xl",
+    filled: "",
+    tonal: "",
+    outlined: "border",
+    text: "",
+    colors: {
+      primary: "bg-[#000088]",
+      secondary: "bg-gray-400",
+      success: "bg-green-900",
+      warning: "bg-amber-500",
+      danger: "bg-red-500",
+      info: "bg-teal-500",
+      white: "bg-white",
+    },
+  },
+  card: {
+    base: "card",
+    body: "card-body",
+    headline: "text-base font-sans",
+    subHeadline: "text-base",
+    supportingText: "text-lg text-black font-light",
+    cardRightContent: "text-right",
+    actions: "py-4 w-full",
+    tags: "p-4 w-full border-t border-gray-100",
+    image: "bg-cover bg-center",
+  },
+  bg: {
+    white: "bg-white",
+    primary: "bg-sky-50",
+    yellow: "bg-[#FFFDE5]",
+    brown: "bg-[#F7C59F]",
+    green: "bg-[#F5FFF5]",
+    blue: "bg-[#F2F4FF]",
+    red: "bg-[#FEF3F3]",
+    yellow_dark: "bg-[#FFFBBC]",
+    green_dark: "bg-[#D5FFD2]",
+    blue_dark: "bg-[#DADCF4]",
+    red_dark: "bg-[#FFCCCF]",
+    gray_light: "bg-[#E2E2E2]",
+    gray_dark: "bg-[#D4D4D4]",
+    cream: "bg-[#FDECDF]",
+  },
+  typography: {
+    colors: {
+      yellow: "text-yellow-800",
+      text_color: "text-slate-900",
+      primary: "text-[#000088]",
+      gray: "text-[#6B6B6B]",
+      gray_light: "text-[#727971]",
+      gray_medium: "text-[#4D4D4D]",
+      gray_lighter: "text-[#7F7F7F]",
+      dark_red: "text-[#C82B32]",
+      navy_blue: "text-[#000088]",
+      navy_blue_light: "text-[#12355B]",
+      dark_blue: "text-[#14008D]",
+      green: "text-[#066D37]",
+      light_green: "text-[#1A7947]",
+      saffron: "text-[#FF9933]",
+      red: "text-red-700",
+      black: "text-[#0E1F12]",
+      black_light: "text-[#414941]",
+      black_medium: "text-[#212121]",
+    },
+    variants: {
+      title: {
+        large: "text-base",
+        medium: "text-sm",
+        small: "text-xs",
+      },
+      body: {
+        large: "text-base",
+        medium: "text-sm",
+        small: "text-xs",
+      },
+      display: {
+        xs3: "text-[8px] font-sans",
+        xs2: "text-[10px] font-sans",
+        xs: "text-xs font-sans",
+        sm: "text-sm font-sans",
+        base: "text-base font-sans",
+        lg: "text-lg font-sans",
+        xl: "text-xl font-sans",
+        xl2: "text-[22px] font-sans",
+        xl3: "text-[32px] font-sans",
+      },
+    },
+    style: {
+      fontWeight: {
+        bold: "font-bold",
+        semibold: "font-semibold",
+        thin: "font-thin",
+      },
+    },
+  },
+  size: {
+    xs: "text-xs",
+    sm: "text-sm",
+    base: "text-base",
+    lg: "text-lg",
+    xl: "text-xl",
+    xl2: "text-2xl",
+    xl3: "text-3xl",
+    xl4: "text-4xl",
+  },
+  input: {
+    primary: {
+      field:
+        "bg-[#FFFFFF] h-10 pl-[10px] mb-[10px] flex w-full rounded-lg  border border-[#DCDCDC] focus:outline-none focus:ring-2 focus:ring-primary_medium",
+      file: "relative border-2 h-24 rounded-lg flex justify-center items-center",
+      select:
+        "appearance-none bg-primary_low h-12 w-full h-full rounded-md focus:outline-none focus:ring-2 focus:ring-primary_medium",
+      errorField:
+        "bg-primary_low pl-4 pr-3 h-12 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-red-900",
+      errorFileField:
+        "relative border-2 h-24 rounded-lg flex justify-center items-center focus:ring-2 focus:ring-red-900",
+      label: "text-xs font-semibold text-primary",
+      error: "text-xs text-red-900",
+      helpText: "text-xs text-gray-400",
+    },
+    error: "text-xs text-red-900",
+  },
+  border: {
+    colors: {
+      navyBlue: "border-[#000088]",
+    },
+  },
+  text: {
+    primary: "text-gray-400",
+    success: "text-green-900",
+    error: "text-red-500",
+  },
+};
+
+export default theme;
