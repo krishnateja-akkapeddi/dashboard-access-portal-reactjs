@@ -79,7 +79,6 @@ const OTPLoginForm: React.FC<Props> = ({
         mobile: data.mobile,
         otp: data.otp,
       });
-      console.log("result", result.role);
       if (
         result.role === UserRoles.TSO ||
         result.role === UserRoles.CSE ||
