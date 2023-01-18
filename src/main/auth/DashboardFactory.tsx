@@ -8,13 +8,16 @@ import { LocalLoggedInUser } from "../../data/usecases/auth/local-logged-in-user
 import DashboardPage from "../../presentation/pages/DashboardPage";
 
 const DashboardFactory = () => {
+  const navigate = useNavigate();
   const storage = LocalJsonStorage.getInstance();
   const token = storage.get(AUTH_TOKEN_KEY);
   const axiosHttpClient = AxiosHttpClient.getInstance();
   axiosHttpClient.setAuthHeaders({ [AUTH_HEADER]: atob(token) });
 
   const loggedInUser = new LocalLoggedInUser(storage);
-
+  if (!loggedInUser) {
+    navigate("/auth/login");
+  }
   return (
     <div>
       <DashboardPage loggedInUser={loggedInUser} />

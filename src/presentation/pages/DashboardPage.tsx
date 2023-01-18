@@ -6,7 +6,6 @@ import Navbar from "../components/Navbar";
 import { LoggedInUser } from "../../domain/usages/auth/logged-in-user";
 import { pageRoutes } from "../../routes";
 import { useNavigate } from "react-router-dom";
-import Endpoints from "../../domain/endpoints";
 import { Constants } from "../../common/Constants";
 type Props = {
   loggedInUser: LoggedInUser;
@@ -67,33 +66,37 @@ const DashboardPage = (props: Props) => {
         loggedInUserDetails={loggedInUserDetails}
       />
 
-      <div className=" ml-36 pt-[7rem] mr-48 border ">
+      <div className=" ml-[13%] pt-[5%] mr-[8%]  ">
         <div>
           {onFrame ? (
-            <div className=" absolute top-80 left-[45rem] text-center">
+            <div className=" absolute top-[50%] left-[45%] text-center">
               <CircularProgress />
               <Typography>Loading Data... </Typography>
             </div>
           ) : (
             <Typography
               size={TypographySize.XL}
-              className="absolute top-80 left-[27rem] "
+              className="absolute top-[50%] left-[30%] "
             >
               Please make sure that the cursor is on the window to load the data{" "}
             </Typography>
-          )}{" "}
-          <iframe
-            id="dashboard"
-            height={700}
-            width={1200}
-            src={dashboardUrl}
-            // src="https://goapt.in/0cD3c"
-            frameBorder={0}
-            allowFullScreen
-            className="p-4 relative"
-          />
+          )}
+          {onFrame && (
+            <iframe
+              id="dashboard"
+              height={700}
+              width={1000}
+              // src={dashboardUrl}
+              src="https://goapt.in/0cD3c"
+              frameBorder={0}
+              allowFullScreen
+              className="p-4 relative"
+            />
+          )}
         </div>
-        <div className=" w-[38rem] left-[45.1rem] h-8 absolute text-transparent bottom-[-3.5rem] bg-white ">
+        <div
+          className={` w-[38%] left-[53%] h-8 absolute  text-transparent top-[106%] bg-white `}
+        >
           d
         </div>
       </div>

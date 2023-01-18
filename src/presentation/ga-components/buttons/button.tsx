@@ -5,7 +5,7 @@ import { Icon, IconSize } from "../Icon";
 
 type ButtonProps = {
   theme: any;
-  text: string;
+  text: string | React.ReactNode;
   color?: ButtonColor;
   onClick: () => void;
   className?: string;

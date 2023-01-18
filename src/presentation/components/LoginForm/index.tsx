@@ -166,22 +166,45 @@ const OTPLoginForm: React.FC<Props> = ({
       )}
       {!otpSent && (
         <Button
-          text="Request OTP"
+          text={
+            loading ? (
+              <div
+                className="inline-block w-5 h-5 
+      border-t-2 
+      border-t-white  
+      rounded-full 
+      animate-spin pt-3"
+              ></div>
+            ) : (
+              "Request OTP"
+            )
+          }
           color={ButtonColor.PRIMARY}
           onClick={handleSubmit(requestOtp)}
-          icon={loading ? "loading" : ""}
-          iconSpin={loading}
           className="h-[40px] mt-10 w-full rounded-lg"
         />
       )}
 
       {otpSent && (
         <Button
-          text="Login"
+          text={
+            loading ? (
+              <>
+                <div
+                  className="inline-block w-5 h-5 
+            border-t-2 
+            border-t-white  
+            rounded-full 
+            animate-spin pt-3"
+                ></div>
+              </>
+            ) : (
+              "Login"
+            )
+          }
           color={ButtonColor.PRIMARY}
           onClick={handleSubmit(validateOtp)}
-          icon={loading ? "loading" : ""}
-          iconSpin={loading}
+          iconSpin={true}
           className="h-[40px] mt-10 w-full rounded-lg"
         />
       )}
